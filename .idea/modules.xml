@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/astrohelper.iml" filepath="$PROJECT_DIR$/.idea/astrohelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Astrogazer.iml" filepath="$PROJECT_DIR$/Astrogazer.iml" />
     </modules>
   </component>
 </project>
