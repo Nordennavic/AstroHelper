@@ -1,0 +1,23 @@
+language: java
+jdk:
+  - oraclejdk11
+node_js:
+  - 12.14.0
+before_install: 
+  - pushd ./frontend/
+  - npm install
+  - npm run build
+  - mkdir ../backend/src/main/resources/frontend
+  - mkdir ../backend/src/main/resources/frontend/build
+  - cp -r ./build/* ../backend/src/main/resources/frontend/build
+  - popd
+  - cd ./backend
+#before_deploy: "cd ./backend"
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  app: $HEROKU_APP_NAME
+  skip_cleanup: true
+  run:
+after_deploy: "echo 'end'"
+local-dir: "./backend"
